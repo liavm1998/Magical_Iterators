@@ -41,26 +41,19 @@ operator> should return true on 5>2
 • cross: 1,14,2,5,4  (one from the start then one from the end)
 operator> should return true on 5>14, 2>1, 4>14
 
-**All iterators should work in O(1) in both memory and time complexity.** Do note that's only the Iterator operation should be in O(1) in memory and time.
-The container can insert and erase elements in O(N).  
-Iterators should **NOT** be detached from the main container. If one add's an element to a container after an iterator is created the iterator should know the element return it should its turn will come. If the element is located in a position before curent the location of the iterator it will not return it. 
-In our case, if one uses PrimeIterator and it points to 5, adding 3 will not change the iterator, and the ++ operator will put it at end(). However, adding 7 to the container will make the ++ operator point the iterator to 7.
-
-To simplify the implementation, we will ignore the case where an iterator points to an element while we delete that element. In such a case, the iterator is no longer valid. There is no need to implement a solution for this situation; it's up to the programmer not to use it.
+**All iterators should work in O(1) in both memory and time complexity.**
+Iterators should **NOT** be detached from the main container. If one add's an element to a container after an iterator is created the iterator should know the element return it should its turn will come. 
 
 
+**חלק ב**: יש לכתוב: 
 
-**חלק א**: יש לכתוב: 
-
-* קובץ כותרת הכולל את כל הפונקציות הדרושות (ללא מימוש). שימו לב: הכותרות צריכות להיות נכונות בהתאם למה שנלמד בהרצאות - מומלץ לחזור על החומר לפני שמתחילים לכתוב.
-* בדיקות מקיפות לכל הפונקציות הדרושות.
+*מימוש מלא למטלה כדי שהטסט יעבור.
   
 כיתבו את כל הקבצים הדרושים כך שהפקודות הבאות יעבדו ללא שגיאות:
 
 <div dir='ltr'>
 
-    make demo && ./demo
-	make test && ./test
+	bash grade
 
 </div>
 

@@ -124,7 +124,7 @@ TEST_CASE("Test MagicalContainer")
         // Check if the iteration produces the expected result
         CHECK(result == expected);
     }
-
+        
     SUBCASE("Test ascending Iterating when added numbers in mid-iterating"){
         container.addElement(17);
         container.addElement(2);
