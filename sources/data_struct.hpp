@@ -39,6 +39,18 @@ public:
         }
     }
 
+            // Copy constructor
+        LinkedList(const LinkedList& other) = default;
+
+        // Copy assignment operator
+        LinkedList& operator=(const LinkedList& other)= default;
+
+        // Move constructor
+        LinkedList(LinkedList&& other)= default;
+
+        // Move assignment operator
+        LinkedList& operator=(LinkedList&& other)= default;
+
     void insert(int value)
     {
         Node *newNode = new Node(value);
@@ -116,6 +128,9 @@ public:
             }
             size--;
             delete temp;
+        }
+        else {
+            throw std::runtime_error("");
         }
     }
 
